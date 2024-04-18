@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1px;
+}
+
+body {
+  background-color: darkgrey;
+  font-family: "Poppins", sans-serif;
+}
+
+.item {
+  flex-grow: -1;
+}
+
+.card-header {
+  border-radius: 10px 10px 0px 0px;
+  padding: 10px;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border-color: blue;
+
+  &_title {
+    font-size: medium;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+}
+
+.card-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin: 10px;
+  font-size: small;
+  border-style: solid;
+  border-top: 0cap;
+  border-left: 0cap;
+  border-right: 0cap;
+  border-color: gainsboro;
+}
+
+.sem-borda {
+  border: 0;
+}
