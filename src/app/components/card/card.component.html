@@ -1,5 +1,9 @@
-<div class="balance-card">
-  <app-card-header></app-card-header>
-  <app-card-item></app-card-item>
+<div class="card">
+  <app-card-header [header]="cardHeader"></app-card-header>
+
+  <app-card-item
+    *ngFor="let item of cardItens; let ind = index"
+    [item]="item"
+  ></app-card-item>
   <app-card-resume></app-card-resume>
 </div>

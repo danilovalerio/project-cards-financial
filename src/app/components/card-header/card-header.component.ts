@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ICardHeader } from '../../models/card-header.interface';
 
 @Component({
@@ -7,9 +7,11 @@ import { ICardHeader } from '../../models/card-header.interface';
   styleUrl: './card-header.component.scss',
 })
 export class CardHeaderComponent {
-  header: ICardHeader = {
-    title: 'Card Exemplo',
-    description: 'R$ 123,00',
-    iconSrc: 'assets/icons/icon-credit-card.png',
+  @Input({ required: true }) header: ICardHeader = {} as ICardHeader;
+
+  setHeader: ICardHeader = {
+    title: this.header.title,
+    description: this.header.description,
+    iconSrc: this.header.iconSrc,
   };
 }
