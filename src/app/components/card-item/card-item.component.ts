@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ICardItem } from '../../models/card-item.interface';
+import { ICardItem } from '../../models/models';
 
 @Component({
   selector: 'app-card-item',

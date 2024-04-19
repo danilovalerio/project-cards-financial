@@ -1,0 +1,31 @@
+{
+  "userId": 1,
+  "cliente": {
+    "nome": "Joao da Silva Neto",
+    "idade": 37
+  },
+  "saldos_disponiveis": {
+    "itens": [
+      { "cc": 200 },
+      { "cc_saldo_v,inculado": 200 },
+      { "cp_saldo_vinculado": 200 },
+      { "investimento_com_baixa_aut,omatica": 200 },
+      { "investimento_sem_baixa_automatica": 200 }
+    ],
+    "resumo_total": {
+      "itens": [{ "saldo_total": 1000 }, { "livre_movimentacao": 1000 }]
+    }
+  },
+  "cartao_de_debito": {
+    "itens": []
+  },
+  "cartao_de_credito": {
+    "itens": [
+      { "limite_compra": 1000 },
+      { "disponivel": 1000 },
+      { "limite_saque": 1000 },
+      { "saque_disponivel": 1000 },
+      { "limite_total_utilizado": 1000 }
+    ]
+  }
+}

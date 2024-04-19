@@ -1,5 +1,6 @@
+import { ICardHeader } from './../../models/card-header.interface';
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
-import { ICardItem } from '../../models/card-item.interface';
+import { Cliente, ICardItem, SaldosDisponiveis } from '../../models/models';
 
 @Component({
   selector: 'app-card',
@@ -7,17 +8,15 @@ import { ICardItem } from '../../models/card-item.interface';
   styleUrl: './card.component.scss',
 })
 export class CardComponent implements OnInit {
-  @Input({ required: true }) itens: ICardItem[] = {} as ICardItem[];
+  @Input({ required: false }) header: ICardHeader = {} as ICardHeader;
+  @Input({ required: false }) itens: ICardItem[] = {} as ICardItem[];
 
   cardItens!: ICardItem[];
 
-  cardHeader = {
-    title: 'Teste',
-    description: 'sdfasdfa',
-    iconSrc: 'assets/icons/icon-credit-card.png',
-  };
+  cardHeader!: ICardHeader;
 
   ngOnInit(): void {
+    this.cardHeader = this.header;
     this.cardItens = this.itens;
   }
 }
