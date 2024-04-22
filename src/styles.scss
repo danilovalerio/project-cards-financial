@@ -17,23 +17,6 @@ body {
   flex-grow: -1;
 }
 
-.card-header {
-  border-radius: 10px 10px 0px 0px;
-  padding: 10px;
-  background-color: orange;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  border-color: blue;
-
-  &_title {
-    font-size: medium;
-    font-weight: bold;
-    margin-left: 10px;
-  }
-}
-
 .card-item {
   display: flex;
   justify-content: space-between;
