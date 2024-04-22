@@ -40,7 +40,28 @@ export class AppComponent implements OnInit {
     iconSrc: 'assets/icons/icon-credit-card.png',
   };
 
+  saldosCartaoDeDebitoHeader: ICardHeader = {
+    title: 'Cartão de Débito',
+    description: '',
+    iconSrc: 'assets/icons/icon-debit-card.png',
+  };
+
+  saldosCartaoDeCredito: ICardHeader = {
+    title: 'Cartão de Crédito',
+    description: '',
+    iconSrc: 'assets/icons/icon-credit-card.png',
+  };
+
+  infoCliente: ICardHeader = {
+    title: 'Informações do Cliente',
+    description: '',
+    iconSrc: 'assets/icons/icon-client.png',
+  };
+
   saldosDisponiveisLoad: SaldosDisponiveis = {} as SaldosDisponiveis;
+  itensCartaoDebito: CartaoDeDebito = {} as CartaoDeDebito;
+  itensCartaoCredito: CartaoDeCredito = {} as CartaoDeCredito;
+  infosCliente: Cliente = {} as Cliente;
 
   ngOnInit(): void {
     this.dataLoad = responseFromApi;
@@ -55,5 +76,8 @@ export class AppComponent implements OnInit {
     console.log('itens :' + JSON.stringify(this.itensSaldo));*/
 
     this.saldosDisponiveisLoad = this.dataLoad.saldos_disponiveis;
+    this.itensCartaoDebito = this.dataLoad.cartao_de_debito;
+    this.itensCartaoCredito = this.dataLoad.cartao_de_credito;
+    this.infosCliente = this.dataLoad.cliente;
   }
 }

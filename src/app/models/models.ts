@@ -6,8 +6,7 @@ export interface Root {
 }
 
 export interface Cliente {
-  nome: string;
-  idade: number;
+  itens: ICardItem[];
 }
 
 export interface SaldosDisponiveis {
@@ -17,7 +16,7 @@ export interface SaldosDisponiveis {
 
 export interface ICardItem {
   title: string;
-  description: number;
+  description: number | string;
 }
 
 export interface ResumoTotal {

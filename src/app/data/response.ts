@@ -16,8 +16,10 @@ export const CardsHeader: ICardHeader[] = [
 
 export const responseFromApi: Root = {
   cliente: {
-    nome: 'Joao da Silva Neto',
-    idade: 37,
+    itens: [
+      { title: 'nome', description: 'João da Silva Neto' },
+      { title: 'idade', description: 37 },
+    ],
   },
   saldos_disponiveis: {
     itens: [

@@ -5,6 +5,21 @@
       [itens]="saldosDisponiveisLoad.itens"
     ></app-card>
   </div>
+  <div class="item">
+    <app-card
+      [header]="saldosCartaoDeDebitoHeader"
+      [itens]="itensCartaoDebito.itens"
+    ></app-card>
+  </div>
+  <div class="item">
+    <app-card
+      [header]="saldosCartaoDeCredito"
+      [itens]="itensCartaoCredito.itens"
+    ></app-card>
+  </div>
+  <div class="item">
+    <app-card [header]="infoCliente" [itens]="infosCliente.itens"></app-card>
+  </div>
   <!--
     <div class="item">
     <div class="balance-card">
