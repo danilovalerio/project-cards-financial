@@ -1,9 +1,16 @@
 <div class="card">
   <app-card-header [header]="cardHeader" [style]="bgColor"></app-card-header>
 
-  <app-card-item
-    *ngFor="let item of cardItens; let ind = index"
-    [item]="item"
-  ></app-card-item>
-  <app-card-resume></app-card-resume>
+  <div *ngIf="cardItens.length > 0">
+    <app-card-item
+      *ngFor="let item of cardItens; let ind = index"
+      [item]="item"
+    ></app-card-item>
+  </div>
+
+  <div *ngIf="cardItens.length === 0">
+    <p class="meuP">Esse cliente não possui cartão de débito.</p>
+  </div>
+
+  <app-card-resume [itens]="resumoLoadItens"></app-card-resume>
 </div>

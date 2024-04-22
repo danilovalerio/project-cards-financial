@@ -32,7 +32,7 @@ export const responseFromApi: Root = {
     resumo_total: {
       itens: [
         { title: 'Saldo Total', description: 1000 },
-        { title: 'Livre Movimentacao', description: 1000 },
+        { title: 'Livre Movimentacao', description: 1100 },
       ],
     },
   },

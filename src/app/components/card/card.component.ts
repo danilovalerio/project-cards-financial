@@ -10,9 +10,12 @@ import { Cliente, ICardItem, SaldosDisponiveis } from '../../models/models';
 export class CardComponent implements OnInit {
   @Input({ required: false }) header: ICardHeader = {} as ICardHeader;
   @Input({ required: false }) itens: ICardItem[] = {} as ICardItem[];
+  @Input({ required: false }) resumoItens: ICardItem[] = {} as ICardItem[];
   @Input({ required: false }) backGroundColor: string = 'orange';
 
   cardItens!: ICardItem[];
+
+  resumoLoadItens!: ICardItem[];
 
   cardHeader!: ICardHeader;
 
@@ -22,5 +25,6 @@ export class CardComponent implements OnInit {
     this.cardHeader = this.header;
     this.cardItens = this.itens;
     this.bgColor = this.backGroundColor;
+    this.resumoLoadItens = this.resumoItens;
   }
 }
